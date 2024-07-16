@@ -1,0 +1,169 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+:root{
+  --text:rgb(255, 255, 255) ;
+  --adder:rgb(0, 0, 0);
+  --backroundcolor:rgb(189, 189, 189);
+}
+body{
+  color:var(--text);
+  background-color: var(--backroundcolor);
+  font-family: sans-serif;
+  font-weight: 400;
+   font-style: normal;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: var(--adder);
+
+}
+
+.heading{
+  
+  font-family:  sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  
+}
+.button{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;  
+  width: 50px; 
+  height: 50px;
+  border: none;
+  background-color:   var(--adder);; 
+  color: var(--text);
+  font-size: 30px; 
+  border-radius: 100%; 
+  cursor: pointer;
+}
+  .container{
+  padding: 10px;
+}
+.animecontainer{
+  width: 25%;
+  padding: 15px;
+  background-color: var(--text);
+  border-radius: 2%;
+  color: var(--adder);
+  margin: 30px;
+  display: inline-block;
+  vertical-align: top;
+}
+.animecontainer h2{
+  color:  var(--adder);
+}
+.animehead{
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.animesubhead{
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 800;
+}
+.animepara{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.inp{
+  color: var(--text);
+}
+.animecontainer button{
+  color: var(--text);
+  background-color:  var(--adder);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-left: 40%;
+  margin-right: 50%;
+  border: none;
+}
+.popup-overlay{
+  background-color: var(--backroundcolor);
+  opacity: 0.8;
+  position:absolute;
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.popup-box{
+  background-color:  var(--adder);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width:40%;
+  z-index: 2;
+  position: absolute;
+  top:20%;
+  left:30%;
+  display: none;
+}
+.popup-box input{
+  background: transparent;
+  border:none;
+  width:100%  ;
+  margin:5px;
+  border: 5px;
+  font-size: 20px;
+  border-bottom:solid var(--text) 2px   ;
+}
+.popup-box textarea{
+  background: transparent;
+  border: solid var(--text) 2px;
+  width:100%  ;
+  margin:5px;
+  padding: 5px;
+  font-size: 20px;
+  
+}
+#popupadd{
+  color: var(--text);
+  background-color:  var(--adder);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 20%;
+  border: solid var(--text) 2px;
+}
+#popupcancel{
+  color: var(--text);
+  background-color:  var(--adder);
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: solid var(--text) 2px;
+}
+.popup-box input:focus
+{
+  outline:none;
+}
+.popup-box textarea:focus
+{
+  outline:none;
+}

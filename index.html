@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animeworld.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1 class="heading">Anime world</h1>
+    </div>
+    <div class="cont">
+        <div class="animecontainer">
+        <h2 class="animehead">One piece</h2>
+        <h5 class="animesubhead">the tresure one piece</h5>
+        <p class="animepara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, corrupti dolorem ipsum quibusdam at deserunt autem commodi nulla, voluptatem sit itaque deleniti aspernatur ducimus soluta vel praesentium repellat eligendi. Optio.
+        </p>
+        <button onclick="deletebutton(event)">delete</button>
+        </div>
+        
+    </div>
+    <div class="popup-overlay"></div>
+    <div class="popup-box">
+        <h2>Add Anime</h2>
+        <form>
+            <input class="inp" placeholder="Enter anime name" id="animenametext"><br>
+            <input class="inp" placeholder="Enter genre" id="animegenre"><br>
+            <textarea class="inp" placeholder="Enter short description" id="animedescription"></textarea><br>
+            <button id="popupadd">Add</button>
+            <button id="popupcancel">Cancel</button><br>
+        </form>
+    </div>
+
+
+
+
+
+    <button class="button" id="add-button"  >+</button>
+<script>
+    var popupoverlay=document.querySelector(".popup-overlay")
+var popupbox=document.querySelector(".popup-box")
+var addbutton=document.getElementById("add-button")
+var popupcancel=document.getElementById("popupcancel")
+var popupadd=document.getElementById("popupadd")
+ 
+
+addbutton.addEventListener("click",function(){
+    event.preventDefault()
+    popupbox.style.display="block"
+    popupoverlay.style.display="block"
+})
+popupcancel.addEventListener("click",function(){
+    event.preventDefault()
+    popupbox.style.display="none"
+    popupoverlay.style.display="none"
+})
+var animenametext=document.getElementById("animenametext")
+var animegenre=document.getElementById("animegenre")
+var animedescription=document.getElementById("animedescription")
+var cont=document.querySelector(".cont")
+popupadd.addEventListener("click",function(){
+    event.preventDefault()
+    var div=document.createElement("div")
+    div.setAttribute("class","animecontainer")
+    div.innerHTML=`<h2 class="animehead">${animenametext.value}</h2>
+        <h5 class="animesubhead" >${animegenre.value}</h5>
+        <p class="animepara" >${animedescription.value}</p>
+        <button  onclick="deletebutton(event)">delete</button>`
+    cont.append(div)
+    popupbox.style.display="none"
+    popupoverlay.style.display="none"
+
+
+})
+
+function deletebutton(event){
+    event.target.parentElement.remove()
+}
+
+
+
+</script>
+</body>
+</html>
